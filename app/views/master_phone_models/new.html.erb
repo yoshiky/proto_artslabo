@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>機種登録</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>機種登録</h1>
+    <%= form_for(@phone_model) do |f| %>
+      <%= f.text_field :name %>
+      <%= f.submit '登録' %>
+    <% end %>
+    <div style="margin-top: 50px;">
+      <%= link_to '機種一覧', master_phone_models_path %>
+    </div>
+
+</html>

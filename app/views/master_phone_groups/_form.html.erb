@@ -1,0 +1,11 @@
+<%= form_for(@phone_group) do |f| %>
+  <%= f.text_field :name %>
+  <br/>
+
+  <%= f.collection_check_boxes(:master_phone_model_ids, MasterPhoneModel.all.order(:id), :id, :name) do |mpg| %>
+    <%= mpg.label {mpg.check_box + mpg.text} %>
+  <% end %>
+
+  <br/>
+  <%= f.submit '登録' %>
+<% end %>

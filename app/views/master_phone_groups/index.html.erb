@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>機種グループ一覧</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>機種グループ一覧</h1>
+    <table>
+    <% @phone_groups.each do |pg| %>
+      <tr>
+        <td><%= pg.name %></td>
+        <td><%= link_to 'Edit', edit_master_phone_group_path(pg) %></td>
+      </tr>
+    <% end %>
+    </table>
+    <div style="margin-top: 50px;">
+      <%= link_to '機種グループ登録', new_master_phone_group_path %>
+    </div>
+</html>

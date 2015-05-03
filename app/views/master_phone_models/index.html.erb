@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MasterPhoneModel</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>機種一覧</h1>
+    <% @phone_models.each do |pm| %>
+      <li><%= pm.name %></li>
+    <% end %>
+    <div style="margin-top: 50px;">
+      <%= link_to '機種登録', new_master_phone_model_path %>
+    </div>
+</html>
