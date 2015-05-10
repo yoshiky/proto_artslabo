@@ -18,7 +18,14 @@
   <div>
     <%= f.collection_select :master_phone_group_id, MasterPhoneGroup.all, :id, :name %>
   </div>
-  <div class="actions">
+  <% if @shop.persisted? %>
+    <div>
+      <%= f.collection_check_boxes :master_phone_model_ids, @shop_phones, :id, :name do |mpm| %>
+        <%= mpm.label {mpm.check_box + mpm.text} %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="actions" style="margin-top: 50px;">
     <%= f.submit %>
   </div>
 <% end %>

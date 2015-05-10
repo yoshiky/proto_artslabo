@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shop_id: 
+  master_phone_master_id: 
+  potision: 1
+
+two:
+  shop_id: 
+  master_phone_master_id: 
+  potision: 1
