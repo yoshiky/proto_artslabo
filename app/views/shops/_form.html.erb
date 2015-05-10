@@ -20,9 +20,11 @@
   </div>
   <% if @shop.persisted? %>
     <div>
-      <%= f.collection_check_boxes :master_phone_model_ids, @shop_phones, :id, :name do |mpm| %>
-        <%= mpm.label {mpm.check_box + mpm.text} %>
-      <% end %>
+      <ul>
+        <%= f.collection_check_boxes :master_phone_model_ids, @shop_phones, :id, :name do |mpm| %>
+          <li><%= mpm.label {mpm.check_box + mpm.text} %></li>
+        <% end %>
+      </ul>
     </div>
   <% end %>
   <div class="actions" style="margin-top: 50px;">
