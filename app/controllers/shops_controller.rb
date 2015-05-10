@@ -19,6 +19,7 @@ class ShopsController < ApplicationController
 
   # GET /shops/1/edit
   def edit
+    @shop_phones = Shop.find(params[:id]).master_phone_group.master_phone_models
   end
 
   # POST /shops
@@ -69,6 +70,6 @@ class ShopsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shop_params
-      params.require(:shop).permit(:name, :master_phone_group_id)
+      params.require(:shop).permit(:name, :master_phone_group_id, master_phone_model_ids: [])
     end
 end
